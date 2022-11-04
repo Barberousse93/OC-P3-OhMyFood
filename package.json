@@ -1,0 +1,11 @@
+{
+  "name": "oc-p3-ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 parcours développeut Front-end",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss:./css/style.css"
+  },
+  "author": "Barberousse93",
+  "license": "ISC"
+}
