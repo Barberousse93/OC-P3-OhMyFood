@@ -6,4 +6,21 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
+#accueil {
+  max-width: 768px;
+}
+
+.entete {
+  background-color: white;
+  box-shadow: 0 0 10px black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.entete__retour--invisible {
+  display: none;
+}
+.entete__logo {
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

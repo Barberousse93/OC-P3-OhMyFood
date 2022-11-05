@@ -7,3 +7,23 @@ h1{
 p{
     font-family: 'Roboto', sans-serif;
 }
+
+#accueil{
+    max-width: 768px;
+}
+
+.entete{
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &__retour--invisible{
+        display: none;
+    }
+
+    &__logo{
+        text-align: center;
+        
+    }
+}
