@@ -1,4 +1,5 @@
 @import 'variables';
+/*@import 'mixins';*/
 
 h1{
     font-family: 'Shrikhand', cursive;
@@ -9,21 +10,51 @@ p{
 }
 
 #accueil{
+    margin: auto;
     max-width: 768px;
 }
 
-.entete{
+.entete{    
     background-color: white;
-    box-shadow: 0 0 10px black;
     padding-top: 5px;
     padding-bottom: 5px;
+    display: block;
+    
+    &__retour{
+        position:absolute;
+        font-size:50px;
+        padding-left: 30px;
+        & i{
+            vertical-align: middle;
+        }
+    }
 
     &__retour--invisible{
         display: none;
     }
 
     &__logo{
+        text-align: center;        
+    }
+}
+
+.localisation{
+    background-color: $Couleur-tertaire;
+    border-top: 10px solid darken($Couleur-tertaire, 15%);
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+
+    &__pin i{
+        font-size: 30px;        
+    }
+
+    &__input--saisie{        
         text-align: center;
-        
+        font-size: 18px;
+        font-weight: bold;
+        border: none;        
     }
 }

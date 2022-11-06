@@ -1,3 +1,4 @@
+/*@import 'mixins';*/
 h1 {
   font-family: "Shrikhand", cursive;
 }
@@ -7,20 +8,50 @@ p {
 }
 
 #accueil {
+  margin: auto;
   max-width: 768px;
 }
 
 .entete {
   background-color: white;
-  box-shadow: 0 0 10px black;
   padding-top: 5px;
   padding-bottom: 5px;
+  display: block;
+}
+.entete__retour {
+  position: absolute;
+  font-size: 50px;
+  padding-left: 30px;
+}
+.entete__retour i {
+  vertical-align: middle;
 }
 .entete__retour--invisible {
   display: none;
 }
 .entete__logo {
   text-align: center;
+}
+
+.localisation {
+  background-color: #99E2D0;
+  border-top: 10px solid #5dd1b5;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.localisation__pin i {
+  font-size: 30px;
+}
+.localisation__input--saisie {
+  background-color: transparent;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
