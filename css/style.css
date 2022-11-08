@@ -1,9 +1,20 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transformm: rotate(0deg);
+  }
+}
 /*@import 'mixins';*/
 h1 {
   font-family: "Shrikhand", cursive;
 }
 
-p {
+p, h2 {
   font-family: "Roboto", sans-serif;
 }
 
@@ -86,6 +97,78 @@ p {
   margin-bottom: 15px;
   border-radius: 25px;
   box-shadow: 10px 10px 10px lightgrey;
+  transition: scale(1);
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+.description__btn:hover {
+  transform: scale(1.15);
+  box-shadow: 15px 15px 10px gray;
+  background-color: #FF79DA;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.fonctionnement__bouton {
+  width: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.fonctionnement__bouton__btn {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #99E2D0;
+  box-shadow: 10px 10px 10px lightgray;
+  border-radius: 20px;
+  transition: scale(1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.fonctionnement__bouton__btn__puce {
+  position: relative;
+  right: 12%;
+  width: 18px;
+  height: 18px;
+  padding: 5px;
+  font-family: roboto, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #9356DC;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.fonctionnement__bouton__btn i {
+  font-size: 20px;
+  transition: color 0.3s;
+}
+.fonctionnement__bouton__btn__texte {
+  font-size: 20px;
+  font-weight: bold;
+}
+.fonctionnement__bouton__btn:hover {
+  transform: scale(1.15);
+  box-shadow: 15px 15px 10px gray;
+}
+.fonctionnement__bouton__btn:hover i {
+  color: #9356DC;
+}
+.fonctionnement__bouton__btn:hover .fonctionnement__bouton__btn__puce { /* !!!!!!! */
+  animation-name: spin;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */
