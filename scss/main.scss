@@ -90,7 +90,7 @@ p,h2{
         font-size: 20px;
         font-weight: bold;
         color:white;
-        width: 30%;
+        width: 40%;
         text-align: center;
         padding: 15px;
         margin-top: 15px;
@@ -179,4 +179,50 @@ p,h2{
             
         }        
     }
+}
+
+.restaurants{
+    background-color: $Couleur-tertaire;
+    display:flex;
+    flex-direction: column;
+
+    &__cards{
+        display: flex;
+        flex-direction: column;
+
+        &__carte{
+            background-color: white;
+            border:1px solid black;
+            display:flex;
+            flex-direction: column;
+            border-radius: 25px;            
+            margin:20px;            
+
+            &__photo{                
+                
+                &__img{
+                    position:relative;
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                    object-fit: cover;
+                    width: 100%;
+                    height:200px;                    
+                }
+                
+                &__new{
+                    z-index: 1;
+                    display: block;
+                    position:absolute;
+                    text-align: center;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    background-color: $Couleur-secondaire;
+                    color:white; 
+                    font-weight: bold;                  
+                }
+                
+            }
+        }
+    }
+    
 }
