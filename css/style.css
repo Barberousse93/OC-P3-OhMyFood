@@ -9,12 +9,23 @@
     transformm: rotate(0deg);
   }
 }
+@keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*@import 'mixins';*/
 h1 {
   font-family: "Shrikhand", cursive;
 }
 
-p, h2 {
+p, h2, h3 {
   font-family: "Roboto", sans-serif;
 }
 
@@ -105,11 +116,17 @@ p, h2 {
   box-shadow: 15px 15px 10px gray;
   background-color: #FF79DA;
 }
+.description__btn:active {
+  transform: scale(0.85);
+}
 
 .fonctionnement {
   display: flex;
   flex-direction: column;
   align-content: space-around;
+}
+.fonctionnement h2 {
+  margin-left: 15px;
 }
 .fonctionnement__bouton {
   width: auto;
@@ -175,6 +192,10 @@ p, h2 {
   background-color: #99E2D0;
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+}
+.restaurants h2 {
+  margin-left: 15px;
 }
 .restaurants__cards {
   display: flex;
@@ -182,21 +203,28 @@ p, h2 {
 }
 .restaurants__cards__carte {
   background-color: white;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   border-radius: 25px;
-  margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 25px;
+  transition: box-shadow 0.3s;
+}
+.restaurants__cards__carte:hover {
+  box-shadow: 10px 10px 10px gray;
 }
 .restaurants__cards__carte__photo__img {
   position: relative;
+}
+.restaurants__cards__carte__photo__img img {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   object-fit: cover;
   width: 100%;
   height: 200px;
 }
-.restaurants__cards__carte__photo__new {
+.restaurants__cards__carte__photo__img__new {
   z-index: 1;
   display: block;
   position: absolute;
@@ -206,6 +234,46 @@ p, h2 {
   background-color: #FF79DA;
   color: white;
   font-weight: bold;
+  top: 15px;
+  right: 15px;
+  animation-duration: 0.8s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+.restaurants__cards__carte__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.restaurants__cards__carte__description__texte {
+  padding-left: 15px;
+}
+.restaurants__cards__carte__description__texte h3 {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.restaurants__cards__carte__description__texte p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.restaurants__cards__carte__description__favori {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-right: 15px;
+}
+.restaurants__cards__carte__description__favori i {
+  font-size: 30px;
+  color: #99E2D0;
+  transition: color 0.5s, font-weight 0.3s;
+}
+.restaurants__cards__carte__description__favori i:hover {
+  color: red;
+  font-weight: 900;
+  animation-name: spin;
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */
