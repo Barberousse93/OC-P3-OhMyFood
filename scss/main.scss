@@ -2,12 +2,20 @@
 @import 'animations';
 /*@import 'mixins';*/
 
-h1{
+h1,h4{
     font-family: 'Shrikhand', cursive;
 }
 
 p,h2,h3{
     font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 #accueil{
@@ -89,10 +97,12 @@ p,h2,h3{
         background-color: $Couleur-primaire;
         font-size: 20px;
         font-weight: bold;
-        color:white;
-        width: 40%;
+        color:white;       
         text-align: center;
-        padding: 15px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 20px;
+        padding-right: 20px;
         margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 25px;
@@ -130,10 +140,9 @@ p,h2,h3{
         align-items: center;      
 
         &__btn{
-            width: 40%;
+            width: 70%;
             display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
+            flex-direction: row;            
             align-items:center;
             margin:auto;
             margin-top: 20px;
@@ -143,12 +152,12 @@ p,h2,h3{
             background-color: $Couleur-tertaire;
             box-shadow: 10px 10px 10px lightgray;
             border-radius: 20px;
-            transition:scale(1);
+            /*transition:scale(1);*/
             transition: transform 0.3s,box-shadow 0.3s;    
             
             &__puce{
                 position: relative;
-                right: 12%;
+                right: 28px;
                 width: 18px;
                 height: 18px;
                 padding: 5px;
@@ -164,7 +173,9 @@ p,h2,h3{
 
             & i{
                 font-size: 20px;
+                margin-right: 20px;
                 transition:color 0.3s
+
             }
             
             &__texte{
@@ -194,6 +205,7 @@ p,h2,h3{
     display:flex;
     flex-direction: column;
     margin-top: 20px;
+    
 
     & h2{
         margin-left: 15px;
@@ -293,4 +305,34 @@ p,h2,h3{
         }
     }
     
+}
+
+.footer{
+    background-color: darken($Couleur-tertaire, 40%);
+    color:white;
+    padding:30px;
+    margin-top: 30px;
+
+        & h4{
+            font-weight: lighter;
+            margin-bottom: 20px;
+        }
+        
+        &__footer_1{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 30px;
+
+            & i{
+                margin-right: 10px;
+            }
+        }
+
+        & a{
+            color: white;
+        }
+
+
+
 }
