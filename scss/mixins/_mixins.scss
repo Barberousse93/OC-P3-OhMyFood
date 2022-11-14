@@ -1,0 +1,14 @@
+@mixin anim-loader ($delay) {
+    animation-name: saut;            
+            animation-duration: 0.2s;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(0,.73,.8,1.48); 
+            animation-delay: $delay;   
+}
+
+@mixin anim_fondu{
+    animation-name: fondu_out;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
