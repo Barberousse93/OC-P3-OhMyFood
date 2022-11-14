@@ -20,7 +20,35 @@
     opacity: 1;
   }
 }
-/*@import 'mixins';*/
+@keyframes fondu_out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+@keyframes saut {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-100px) scale(1.5) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(360deg);
+  }
+}
+@keyframes reduire {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
 h1, h4 {
   font-family: "Shrikhand", cursive;
 }
@@ -40,6 +68,7 @@ html {
 #accueil {
   margin: auto;
   max-width: 768px;
+  position: relative;
 }
 
 .entete {
@@ -307,6 +336,102 @@ html {
 }
 .footer a {
   color: white;
+}
+
+.loader {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  width: auto;
+  height: 100vh;
+  z-index: 2;
+  animation-name: reduire;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.99, 0.03, 0.29, 1.07);
+  animation-delay: 3s;
+}
+.loader__titre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 50px;
+}
+.loader__titre__o {
+  font-size: 100px;
+  animation-name: saut;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+  animation-delay: 0.2s;
+}
+.loader__titre__h {
+  font-size: 100px;
+  animation-name: saut;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+  animation-delay: 0.4s;
+}
+.loader__titre__m {
+  font-size: 100px;
+  animation-name: saut;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+  animation-delay: 0.6s;
+}
+.loader__titre__y {
+  font-size: 100px;
+  animation-name: saut;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+  animation-delay: 0.8s;
+}
+.loader__titre__f {
+  font-size: 100px;
+  animation-name: saut;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+  animation-delay: 1s;
+}
+.loader__titre__o2 {
+  font-size: 100px;
+  animation-name: saut;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+  animation-delay: 1.2s;
+}
+.loader__titre__o3 {
+  font-size: 100px;
+  animation-name: saut;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+  animation-delay: 1.4s;
+}
+.loader__titre__d {
+  font-size: 100px;
+  animation-name: saut;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+  animation-delay: 1.6s;
+}
+.loader__chargement {
+  position: absolute;
+  font-size: 30px;
+  color: #9356DC;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */
