@@ -1,0 +1,126 @@
+.restaurants
+{
+    background-color: $Couleur-tertaire;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+
+    & h2
+    {
+        margin-left: 15px;
+    }
+
+    &__cards
+    {
+        display: flex;
+        flex-direction: column;
+
+        &__carte
+        {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            border-radius: 25px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 25px;
+            transition: box-shadow 0.3s;
+
+            &:hover
+            {
+                box-shadow: 10px 10px 10px gray;
+            }
+
+            &__photo
+            {
+
+                &__img
+                {
+                    position: relative;
+
+                    & img
+                    {
+                        border-top-left-radius: 25px;
+                        border-top-right-radius: 25px;
+                        object-fit: cover;
+                        width: 100%;
+                        height: 200px;
+                    }
+
+                    &__new
+                    {
+                        z-index: 1;
+                        display: block;
+                        position: absolute;
+                        text-align: center;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        background-color: $Couleur-tertaire;
+                        color: darken($Couleur-tertaire, 50%);
+                        font-weight: bold;
+                        top: 15px;
+                        right: 15px;
+                        animation-duration: .8s;
+                        animation-name: clignoter;
+                        animation-iteration-count: infinite;
+                        /*transition: none;*/
+                    }
+                }
+            }
+
+            &__description
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                &__texte
+                {
+                    padding-left: 15px;
+
+                    & h3
+                    {
+                        margin-bottom: 5px;
+                        margin-top: 10px;
+                    }
+
+                    & p
+                    {
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &__favori
+                {
+                    display: flex;
+                    align-items: center;
+                    padding: 15px;
+                    margin-right: 15px;
+
+                    & i
+                    {
+                        cursor: pointer;
+                        font-size: 30px;
+                        color: black;
+                        transition: color 0.5s, font-weight 0.3s;
+
+                        &:hover
+                        {
+                            background: linear-gradient($Couleur-primaire, $Couleur-secondaire);
+                            background-clip: text;
+                            color: transparent;
+                            font-weight: 900;
+                            animation-name: spin;
+                            animation-iteration-count: 1;
+                            animation-duration: 0.3s;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+}

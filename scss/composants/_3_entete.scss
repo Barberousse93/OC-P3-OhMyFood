@@ -1,0 +1,29 @@
+.entete
+{
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+
+    &__retour
+    {
+        position: absolute;
+        font-size: 50px;
+        padding-left: 30px;
+
+        & i
+        {
+            vertical-align: middle;
+        }
+    }
+
+    &__retour--invisible
+    {
+        display: none;
+    }
+
+    &__logo
+    {
+        text-align: center;
+    }
+}

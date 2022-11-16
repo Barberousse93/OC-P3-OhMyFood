@@ -1,0 +1,88 @@
+.fonctionnement
+{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+
+    & h2
+    {
+        margin-left: 15px;
+    }
+
+    &__bouton
+    {
+        width: auto;
+        margin: auto;
+
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        &__btn
+        {
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: $Couleur-tertaire;
+            box-shadow: 10px 10px 10px lightgray;
+            border-radius: 20px;
+            /*transition:scale(1);*/
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &__puce
+            {
+                position: relative;
+                right: 28px;
+                width: 18px;
+                height: 18px;
+                padding: 5px;
+                font-family: roboto, sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: $Couleur-primaire;
+                color: white;
+                text-align: center;
+                vertical-align: middle;
+                border-radius: 50%;
+            }
+
+            & i
+            {
+                font-size: 20px;
+                margin-right: 20px;
+                transition: color 0.3s
+            }
+
+            &__texte
+            {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            &:hover
+            {
+                transform: scale(1.15);
+                box-shadow: 15px 15px 10px gray;
+
+                & i
+                {
+                    color: $Couleur-primaire;
+                }
+
+                /*& .fonctionnement__bouton__btn__puce
+                {
+                    animation-name: spin;
+                    animation-iteration-count: 1;
+                    animation-duration: 1s;
+                }*/
+            }
+
+        }
+    }
+}

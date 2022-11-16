@@ -1,0 +1,26 @@
+.localisation
+{
+    background-color: $Couleur-tertaire;
+    border-top: 10px solid darken($Couleur-tertaire, 15%);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &__pin i
+    {
+        font-size: 30px;
+    }
+
+    &__input--saisie
+    {
+        background-color: transparent;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        border: none;
+        width: 50vh;
+    }
+}
