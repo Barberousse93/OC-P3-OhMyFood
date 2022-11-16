@@ -10,3 +10,45 @@
 @import 'composants/6_fonctionnement';
 @import 'composants/7_restautants';
 @import 'composants/8_footer';
+
+
+.banniere
+{
+    display: flex;
+    position: relative;
+    justify-items: center;
+
+    &__photo
+    {
+        width: 768px;
+        height: 25vh;
+        object-fit: cover;
+    }
+
+    &__nom
+    {
+        position: absolute;
+        background: white;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: -35px;
+
+        &__texte
+        {
+            position: relative;
+            text-align: center;
+            padding-left: 25px;
+
+        }
+
+        &__favori
+        {
+            @include icone_favori;
+        }
+    }
+}

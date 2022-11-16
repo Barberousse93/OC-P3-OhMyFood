@@ -94,30 +94,7 @@
 
                 &__favori
                 {
-                    display: flex;
-                    align-items: center;
-                    padding: 15px;
-                    margin-right: 15px;
-
-                    & i
-                    {
-                        cursor: pointer;
-                        font-size: 30px;
-                        color: black;
-                        transition: color 0.5s, font-weight 0.3s;
-
-                        &:hover
-                        {
-                            background: linear-gradient($Couleur-primaire, $Couleur-secondaire);
-                            background-clip: text;
-                            color: transparent;
-                            font-weight: 900;
-                            animation-name: spin;
-                            animation-iteration-count: 1;
-                            animation-duration: 0.3s;
-                        }
-
-                    }
+                    @include icone_favori;
                 }
             }
         }

@@ -1,14 +1,44 @@
-@mixin anim-loader ($delay) {
-    animation-name: saut;            
-            animation-duration: 0.2s;
-            animation-iteration-count: 1;
-            animation-timing-function: cubic-bezier(0,.73,.8,1.48); 
-            animation-delay: $delay;   
+@mixin anim-loader ($delay)
+{
+    animation-name: saut;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0, .73, .8, 1.48);
+    animation-delay: $delay;
 }
 
-@mixin anim_fondu{
+@mixin anim_fondu
+{
     animation-name: fondu_out;
     animation-delay: 2s;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+}
+
+@mixin icone_favori
+{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-right: 15px;
+
+    & i
+    {
+        cursor: pointer;
+        font-size: 30px;
+        color: black;
+        transition: color 0.5s, font-weight 0.3s;
+
+        &:hover
+        {
+            background: linear-gradient($Couleur-primaire, $Couleur-secondaire);
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            animation-name: spin;
+            animation-iteration-count: 1;
+            animation-duration: 0.3s;
+        }
+
+    }
 }
