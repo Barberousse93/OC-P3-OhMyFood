@@ -1,2 +1,2 @@
 # OC-P3-OhMyFood
-Parcours OpenClassRomms - Développeur JavaScript REACT Projet 3
+Parcours OpenClassRooms - Développeur JavaScript REACT Projet 3
