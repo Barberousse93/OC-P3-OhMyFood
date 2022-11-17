@@ -23,52 +23,13 @@
         justify-content: center;
         line-height: 50px;
 
-        &__o
+        @for $i from 1 through 8
         {
-            font-size: 7vw;
-            @include anim-loader (0.15s);
-        }
-
-        &__h
-        {
-            font-size: 7vw;
-            @include anim-loader (0.3s);
-        }
-
-        &__m
-        {
-            font-size: 7vw;
-            @include anim-loader (0.45s);
-        }
-
-        &__y
-        {
-            font-size: 7vw;
-            @include anim-loader (0.6s);
-        }
-
-        &__f
-        {
-            font-size: 7vw;
-            @include anim-loader (0.75s);
-        }
-
-        &__o2
-        {
-            font-size: 7vw;
-            @include anim-loader (0.9s);
-        }
-
-        &__o3
-        {
-            font-size: 7vw;
-            @include anim-loader (1.05s);
-        }
-
-        &__d
-        {
-            font-size: 7vw;
-            @include anim-loader (1.2s);
+            &__#{$i}
+            {
+                font-size: 7vw;
+                @include anim-loader($delai_anim_loader * $i);
+            }
         }
     }
 

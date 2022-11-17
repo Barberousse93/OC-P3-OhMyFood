@@ -1,6 +1,6 @@
 .description
 {
-    background-color: lighten($Couleur-primaire, 35%);
+    background-color: $Couleur-fond;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,14 +38,14 @@
         margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 30px;
-        box-shadow: 10px 10px 10px lightgrey;
+        box-shadow: $ombre-repos;
         /*transition: scale(1);*/
         transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 
         &:hover
         {
             transform: scale(1.05);
-            box-shadow: 15px 15px 10px gray;
+            box-shadow: $ombre-hover;
             background-color: $Couleur-secondaire;
         }
 
