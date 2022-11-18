@@ -29,8 +29,8 @@
             margin-bottom: 20px;
             padding-left: 15px;
             padding-right: 15px;
-            background-color: $Couleur-tertaire;
-            box-shadow: 10px 10px 10px lightgray;
+            background-color: $Couleur-fond;
+            box-shadow: $ombre-repos;
             border-radius: 20px;
             /*transition:scale(1);*/
             transition: transform 0.3s, box-shadow 0.3s;
@@ -68,7 +68,7 @@
             &:hover
             {
                 transform: scale(1.15);
-                box-shadow: 15px 15px 10px gray;
+                box-shadow: $ombre-hover;
 
                 & i
                 {

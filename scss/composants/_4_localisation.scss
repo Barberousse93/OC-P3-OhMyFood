@@ -1,7 +1,8 @@
 .localisation
 {
-    background-color: $Couleur-tertaire;
-    border-top: 10px solid darken($Couleur-tertaire, 15%);
+    /*background-color: $Couleur-fond;*/
+    background: linear-gradient(darken($Couleur-fond, 20%) 10%, 20%, darken($Couleur-fond, 5%) 90%);
+    /*border-top: 10px solid darken($Couleur-tertaire, 15%);*/
     position: relative;
     display: flex;
     flex-direction: row;
