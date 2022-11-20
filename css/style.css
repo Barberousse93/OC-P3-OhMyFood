@@ -672,7 +672,9 @@ body {
   justify-self: flex-end;
   margin-right: 5px;
   transform: translateX(70px);
-  transition: transform 0.3s;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 .carte__menu__liste__element__check {
   box-sizing: border-box;
@@ -684,7 +686,9 @@ body {
   height: 80px;
   border-radius: 0 25px 25px 0;
   transform: translatex(100%);
-  transition: transform 0.3s;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 .carte__menu__liste__element__check i {
   color: white;
