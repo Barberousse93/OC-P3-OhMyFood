@@ -26,32 +26,6 @@
 
     &__btn
     {
-        background-color: $Couleur-primaire;
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-        text-align: center;
-        padding-top: 1px;
-        padding-bottom: 1px;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        border-radius: 30px;
-        box-shadow: $ombre-repos;
-        /*transition: scale(1);*/
-        transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-
-        &:hover
-        {
-            transform: scale(1.05);
-            box-shadow: $ombre-hover;
-            background-color: $Couleur-secondaire;
-        }
-
-        &:active
-        {
-            transform: scale(1);
-        }
+        @include bouton-couleur-primaire;
     }
 }

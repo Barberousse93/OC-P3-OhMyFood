@@ -28,8 +28,8 @@
     &__nom
     {
         position: absolute;
-        background: white;
-        width: auto;
+        background: $Couleur-fond;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -51,4 +51,120 @@
             @include icone_favori;
         }
     }
+}
+
+.carte{
+    background: $Couleur-fond;
+    display:flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 20px;
+
+    & ul{
+        list-style-type: none;
+    }
+
+    & h2{
+        font-weight: lighter;
+        margin-bottom: 5px;
+    }
+
+    &__menu{
+        display:flex;
+        flex-direction: column;
+
+        &__tiret{
+            position:relative;
+            content: "";
+            width: 50px;
+            height: 5px;
+            background: $Couleur-tertaire;
+        }
+
+        &__liste{
+            box-sizing: border-box;
+
+            &__element{                
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                border-radius: 25px;
+                box-shadow: $ombre-repos;
+                margin-top: 15px;
+                overflow:hidden;
+
+                &__description{
+                    width: 100%;                    
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 10px;
+                    margin-right: 10px;
+
+                    & h3{
+                        margin-top: 0;
+                        margin-bottom: 10px;
+                    }
+
+                    &__bloc{
+                        display:flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        & p{
+                            margin-top: 0;
+                            margin-bottom: 0;
+                        }
+                        
+
+                        &__prix{
+                            font-weight: bold;
+                        }
+                    }
+                    
+                }
+                &__check{                    
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $Couleur-tertaire;
+                    width: 100px;
+                    height: 80px;  
+                    border-radius: 0 25px 25px 0; 
+                    transform: translatex(100%);
+
+                    & i{
+                        color:white;
+                        font-size: 35px;
+
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    
+
+
+}
+
+.bouton{
+    background: $Couleur-fond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+
+    & p{
+        padding: 20px;        
+    }
+
+    &__commander{        
+        @include bouton-couleur-primaire;        
+    }
+
 }

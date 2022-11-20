@@ -298,9 +298,7 @@ body {
 }
 
 .localisation {
-  /*background-color: $Couleur-fond;*/
   background: linear-gradient(#c4c4c4 10%, 20%, #eaeaea 90%);
-  /*border-top: 10px solid darken($Couleur-tertaire, 15%);*/
   position: relative;
   display: flex;
   flex-direction: row;
@@ -342,6 +340,7 @@ body {
 }
 .description__btn {
   background-color: #9356DC;
+  margin: auto;
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -354,7 +353,6 @@ body {
   margin-bottom: 15px;
   border-radius: 30px;
   box-shadow: 10px 10px 10px lightgray;
-  /*transition: scale(1);*/
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 .description__btn:hover {
@@ -571,8 +569,8 @@ body {
 }
 .banniere__nom {
   position: absolute;
-  background: white;
-  width: auto;
+  background: #f7f7f7;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -610,4 +608,118 @@ body {
           animation-iteration-count: 1;
   -webkit-animation-duration: 0.3s;
           animation-duration: 0.3s;
+}
+
+.carte {
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 20px;
+}
+.carte ul {
+  list-style-type: none;
+}
+.carte h2 {
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+.carte__menu {
+  display: flex;
+  flex-direction: column;
+}
+.carte__menu__tiret {
+  position: relative;
+  content: "";
+  width: 50px;
+  height: 5px;
+  background: #99E2D0;
+}
+.carte__menu__liste {
+  box-sizing: border-box;
+}
+.carte__menu__liste__element {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px lightgray;
+  margin-top: 15px;
+  overflow: hidden;
+}
+.carte__menu__liste__element__description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.carte__menu__liste__element__description h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.carte__menu__liste__element__description__bloc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.carte__menu__liste__element__description__bloc p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.carte__menu__liste__element__description__bloc__prix {
+  font-weight: bold;
+}
+.carte__menu__liste__element__check {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  width: 100px;
+  height: 80px;
+  border-radius: 0 25px 25px 0;
+  transform: translatex(100%);
+}
+.carte__menu__liste__element__check i {
+  color: white;
+  font-size: 35px;
+}
+
+.bouton {
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+.bouton p {
+  padding: 20px;
+}
+.bouton__commander {
+  background-color: #9356DC;
+  margin: auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 10px lightgray;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+.bouton__commander:hover {
+  transform: scale(1.05);
+  box-shadow: 15px 15px 10px gray;
+  background-color: #FF79DA;
+}
+.bouton__commander:active {
+  transform: scale(1);
 }/*# sourceMappingURL=style.css.map */
