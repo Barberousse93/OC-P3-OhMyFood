@@ -689,10 +689,9 @@ body {
 .carte__menu__liste__element__check i {
   color: white;
   font-size: 35px;
-  transition: color 0.3s;
 }
-.carte__menu__liste__element i:active {
-  color: #9356DC;
+.carte__menu__liste__element:hover {
+  box-shadow: 15px 15px 10px gray;
 }
 .carte__menu__liste__element:hover .carte__menu__liste__element__prix {
   transform: translatex(0);

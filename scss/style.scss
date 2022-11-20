@@ -143,15 +143,13 @@
                     & i{
                         color:white;
                         font-size: 35px;
-                        transition: color 0.3s
-
                     }
                 }
-
-                & i:active{
-                    color:$Couleur-primaire;
+                
+                &:hover{
+                    box-shadow: $ombre-hover;
                 }
-
+                
                 &:hover &__prix {
                     
                     transform: translatex(0) ;                    
