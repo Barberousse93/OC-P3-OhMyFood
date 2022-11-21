@@ -6,5 +6,5 @@
         "savePath": "/css"
     },
     ],
-    "files.autoSave": "onWindowChange"
+    "files.autoSave": "onFocusChange"
 }
