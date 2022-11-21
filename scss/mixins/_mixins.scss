@@ -43,7 +43,8 @@
     }
 }
 
-@mixin bouton-couleur-primaire{
+@mixin bouton-couleur-primaire
+{
     background-color: $Couleur-primaire;
     margin: auto;
     font-size: 20px;
@@ -73,8 +74,18 @@
     }
 }
 
-@mixin elision{
+@mixin elision
+{
     white-space: nowrap;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
+}
+
+@mixin fade-in ($delay)
+{
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+    animation-delay: $delay;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }

@@ -53,38 +53,69 @@
     }
 }
 
-.carte{
+.carte
+{
     background: $Couleur-fond;
-    display:flex;
+    display: flex;
     flex-direction: column;
     margin-top: 10px;
     padding: 20px;
 
-    & ul{
+    & li
+    {
+        opacity: 0;
+    }
+
+    & ul
+    {
         list-style-type: none;
     }
 
-    & h2{
+    & h2
+    {
         font-weight: lighter;
         margin-bottom: 5px;
     }
 
-    &__menu{
-        display:flex;
+    &__menu
+    {
+        display: flex;
         flex-direction: column;
+        opacity: 0;
 
-        &__tiret{
-            position:relative;
+        @for $j from 1 to 4
+        {
+            &:nth-child(#{$j}n)
+            {
+                @include fade-in ((0.3 * $j) + s);
+
+                @for $i from 1 to 10
+                {
+                    li:nth-child(#{$i}n)
+                    {
+                        @include fade-in ((0.2 * $i * $j) + s);
+                    }
+
+                }
+            }
+        }
+
+        &__tiret
+        {
+            position: relative;
             content: "";
             width: 50px;
             height: 5px;
             background: $Couleur-tertaire;
         }
 
-        &__liste{
-            //box-sizing: border-box;
+        &__liste
+        {
+            box-sizing: border-box;
 
-            &__element{                
+
+            &__element
+            {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -93,105 +124,114 @@
                 border-radius: 25px;
                 box-shadow: $ombre-repos;
                 margin-top: 15px;
-                overflow:hidden;
+                overflow: hidden;
 
-                &__description{
-                    width: 100%;                    
+                &__description
+                {
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     margin-left: 10px;
                     margin-right: 10px;
 
-                    & h3{
+
+
+                    & h3
+                    {
                         margin-top: 0;
                         margin-bottom: 10px;
-                       
-
                     }
 
-                    &__bloc{
-                        display:flex;
+                    &__bloc
+                    {
+                        display: flex;
                         flex-direction: row;
                         justify-content: space-between;
+                        //@include elision;
 
-                        & p{
+                        & p
+                        {
                             margin-top: 0;
                             margin-bottom: 0;
-                            
-                        }                        
+                        }
                     }
-                    
                 }
 
-                &__prix{
+                &__prix
+                {
                     font-weight: bold;
                     align-self: flex-end;
-                    justify-self:flex-end;
+                    justify-self: flex-end;
                     margin-right: 5px;
                     transform: translateX(70px);
                     transition-property: transform;
                     transition-duration: 0.3s;
                     transition-timing-function: ease-in-out;
                 }
-                &__check{                    
+
+                &__check
+                {
                     box-sizing: border-box;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     background-color: $Couleur-tertaire;
                     width: 100px;
-                    height: 80px;  
-                    border-radius: 0 25px 25px 0; 
+                    height: 80px;
+                    border-radius: 0 25px 25px 0;
                     transform: translatex(100%);
                     transition-property: transform;
                     transition-duration: 0.3s;
                     transition-timing-function: ease-in-out;
 
-                    & i{
-                        color:white;
+                    & i
+                    {
+                        color: white;
                         font-size: 35px;
                     }
                 }
-                
-                &:hover{
+
+                &:hover
+                {
                     box-shadow: $ombre-hover;
                 }
 
-                &:hover &__prix {
-                    
-                    transform: translatex(0) ;                    
-                }
-                
-                &:hover &__check {
-                    
-                    transform: translatex(0);                    
+                &:hover &__prix
+                {
+                    transform: translatex(0);
                 }
 
-                
+                &:hover &__check
+                {
+                    transform: translatex(0);
+                }
             }
 
         }
     }
 
 
-    
+
 
 
 }
 
-.bouton{
+.bouton
+{
     background: $Couleur-fond;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 80px;
 
-    & p{
-        padding: 20px;        
+    & p
+    {
+        padding: 20px;
     }
 
-    &__commander{        
-        @include bouton-couleur-primaire;        
+    &__commander
+    {
+        @include bouton-couleur-primaire;
     }
 
 }
