@@ -1081,6 +1081,9 @@ body {
 .carte__menu__liste__element:hover .carte__menu__liste__element__check {
   transform: translatex(0);
 }
+.carte__menu__liste__element:active .carte__menu__liste__element__check {
+  background: #9356DC;
+}
 
 .bouton {
   background: #f7f7f7;

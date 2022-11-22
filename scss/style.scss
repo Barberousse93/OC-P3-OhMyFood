@@ -106,7 +106,7 @@
             content: "";
             width: 50px;
             height: 5px;
-            background: $Couleur-tertaire;
+            background: $Couleur-tertiaire;
         }
 
         &__liste
@@ -175,7 +175,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: $Couleur-tertaire;
+                    background-color: $Couleur-tertiaire;
                     width: 100px;
                     height: 80px;
                     border-radius: 0 25px 25px 0;
@@ -204,6 +204,11 @@
                 &:hover &__check
                 {
                     transform: translatex(0);
+                }
+
+                &:active &__check
+                {
+                    background: $Couleur-primaire;
                 }
             }
 
