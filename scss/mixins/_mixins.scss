@@ -5,6 +5,7 @@
     animation-iteration-count: 1;
     animation-timing-function: cubic-bezier(0, .73, .8, 1.48);
     animation-delay: $delay;
+    animation-fill-mode: backwards;
 }
 
 @mixin anim_fondu
@@ -45,7 +46,7 @@
 
 @mixin bouton-couleur-primaire
 {
-    background-color: $Couleur-primaire;
+    background-color: $Couleur-secondaire;
     margin: auto;
     font-size: 20px;
     font-weight: bold;
@@ -59,18 +60,42 @@
     margin-bottom: 15px;
     border-radius: 30px;
     box-shadow: $ombre-repos;
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    z-index: 0;
+    transition: transform 0.3s, background-color 0.3 box-shadow 0.3s;
+
 
     &:hover
     {
         transform: scale(1.05);
         box-shadow: $ombre-hover;
-        background-color: $Couleur-secondaire;
+        background-color: $Couleur-primaire;
+
+        /*&::after
+        {
+            opacity: 1;
+            //border-radius: 30px;
+        }
     }
 
-    &:active
+    &::after
     {
-        transform: scale(1);
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $Couleur-primaire;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.3s;
+        border-radius: 30px;
+    }*/
+
+        &:active
+        {
+            transform: scale(1);
+        }
     }
 }
 
@@ -87,5 +112,5 @@
     animation-duration: 0.5s;
     animation-delay: $delay;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 }

@@ -3,7 +3,7 @@
     position: fixed;
     inset: 0;
     background-color: white;
-    width: auto;
+    //width: 100%;
     height: 100vh;
     z-index: 2;
     animation-name: reduire;
@@ -27,7 +27,7 @@
         {
             &__#{$i}
             {
-                font-size: 7vw;
+                font-size: 7vh;
                 @include anim-loader($delai_anim_loader * $i);
             }
         }
@@ -36,10 +36,10 @@
     &__chargement
     {
         position: absolute;
-        font-size: 3vw;
+        font-size: 3vh;
         color: $Couleur-primaire;
         left: 50%;
-        top: 60%;
+        top: 60vh;
         transform: translate(-50%, -50%);
     }
 }

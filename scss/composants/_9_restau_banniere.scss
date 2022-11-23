@@ -1,0 +1,53 @@
+.banniere
+{
+    display: flex;
+    position: relative;
+    justify-items: center;
+
+    &__photo
+    {
+        margin: auto;
+        width: 100vh;
+        height: 25vh;
+        object-fit: cover;
+
+        @media (min-width:768px)
+        {
+            border-radius: 30px;
+        }
+    }
+
+    &__nom
+    {
+        position: absolute;
+        background: $Couleur-fond;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: -5vh;
+
+        @media (min-width:768px)
+        {
+            width: auto;
+            bottom: -5vh;
+        }
+
+
+        &__texte
+        {
+            position: relative;
+            text-align: center;
+            padding-left: 25px;
+            font-size: 3vh
+        }
+
+        &__favori
+        {
+            @include icone_favori;
+        }
+    }
+}

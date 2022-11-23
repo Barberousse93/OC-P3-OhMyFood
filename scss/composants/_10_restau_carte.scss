@@ -1,0 +1,184 @@
+.carte
+{
+    background: $Couleur-fond;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 20px;
+
+    @media (min-width:768px)
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    & li
+    {
+        opacity: 0;
+    }
+
+    & ul
+    {
+        list-style-type: none;
+    }
+
+    & h2
+    {
+        font-size: 3vh;
+        font-weight: lighter;
+        margin-bottom: 5px;
+    }
+
+    &__menu
+    {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        opacity: 0;
+
+        @media (min-width:768px)
+        {
+            width: 30vw;
+        }
+
+        @for $j from 1 to 4
+        {
+            &:nth-child(#{$j}n)
+            {
+                @include fade-in ((0.3 * $j) + s);
+
+                @for $i from 1 to 10
+                {
+                    li:nth-child(#{$i}n)
+                    {
+                        @include fade-in ((0.2 * $i * $j) + s);
+                    }
+
+                }
+            }
+        }
+
+        &__tiret
+        {
+            position: relative;
+            width: 50px;
+            height: 5px;
+            background: $Couleur-tertiaire;
+        }
+
+        &__liste
+        {
+            box-sizing: content-box;
+
+
+            &__element
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                border-radius: 25px;
+                box-shadow: $ombre-repos;
+                margin-top: 15px;
+                overflow: hidden;
+
+                &__description
+                {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    @include ellipsis;
+
+                    & h3
+                    {
+                        font-size: 2.5vh;
+                        margin-top: 0;
+                        margin-bottom: 10px;
+                        @include ellipsis;
+                    }
+
+                    &__bloc
+                    {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+
+                        & p
+                        {
+                            font-size: 2vh;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            width: 700px;
+                            @include ellipsis;
+                        }
+                    }
+                }
+
+                &__prix
+                {
+                    font-weight: bold;
+                    align-self: flex-end;
+                    justify-self: flex-end;
+                    margin-right: 5px;
+                    transform: translateX(5vh);
+                    transition-property: transform;
+                    transition-duration: 0.3s;
+                    transition-timing-function: ease-in-out;
+                }
+
+                &__check
+                {
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $Couleur-tertiaire;
+                    width: 100px;
+                    height: 80px;
+                    border-radius: 0 25px 25px 0;
+                    transform: translatex(100%);
+                    transition-property: transform;
+                    transition-duration: 0.3s;
+                    transition-timing-function: ease-in-out;
+
+                    & i
+                    {
+                        color: white;
+                        font-size: 35px;
+                    }
+                }
+
+                &:hover
+                {
+                    box-shadow: $ombre-hover;
+                }
+
+                &:hover &__prix
+                {
+                    transform: translatex(0);
+                }
+
+                &:hover &__check
+                {
+                    transform: translatex(0);
+                }
+
+                &:active &__check
+                {
+                    background: $Couleur-primaire;
+                }
+            }
+
+        }
+    }
+
+
+
+
+
+}
