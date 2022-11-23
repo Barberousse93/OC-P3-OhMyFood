@@ -116,6 +116,62 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes pulsation {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  100% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+}
+@keyframes pulsation {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  100% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+}
+@-webkit-keyframes vibrate {
+  0% {
+    transform: scale(1);
+  }
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes vibrate {
+  0% {
+    transform: scale(1);
+  }
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 h1,
 h4 {
   font-family: "Shrikhand", cursive;
@@ -391,11 +447,27 @@ body {
   box-shadow: 10px 10px 10px lightgray;
   z-index: 0;
   transition: transform 0.3s, background-color 0.3 box-shadow 0.3s;
+  -webkit-animation-name: pulsation;
+          animation-name: pulsation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.71, 0.47, 1);
+          animation-timing-function: cubic-bezier(0, 0.71, 0.47, 1);
 }
 .description__btn:hover {
   transform: scale(1.05);
   box-shadow: 15px 15px 10px gray;
   background-color: #9356DC;
+  -webkit-animation-name: vibrate;
+          animation-name: vibrate;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+          animation-timing-function: cubic-bezier(1, 0, 0, 1);
   /*&::after
       {
           opacity: 1;
@@ -1228,11 +1300,27 @@ body {
   box-shadow: 10px 10px 10px lightgray;
   z-index: 0;
   transition: transform 0.3s, background-color 0.3 box-shadow 0.3s;
+  -webkit-animation-name: pulsation;
+          animation-name: pulsation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.71, 0.47, 1);
+          animation-timing-function: cubic-bezier(0, 0.71, 0.47, 1);
 }
 .bouton__commander:hover {
   transform: scale(1.05);
   box-shadow: 15px 15px 10px gray;
   background-color: #9356DC;
+  -webkit-animation-name: vibrate;
+          animation-name: vibrate;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+          animation-timing-function: cubic-bezier(1, 0, 0, 1);
   /*&::after
       {
           opacity: 1;
