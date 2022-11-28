@@ -8,6 +8,7 @@
 
     @include media-min-768
     {
+        //Affichage en ligne en mode tablette et PC
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -15,11 +16,13 @@
 
     & li
     {
+        //Point de départ de l'animation
         opacity: 0;
     }
 
     & ul
     {
+        //Suppression des puces 
         list-style-type: none;
     }
 
@@ -44,6 +47,8 @@
 
         @for $j from 1 to 4
         {
+
+            //Animation : Apparition progressive des composante des menus et des éléments des compsantes
             &:nth-child(#{$j}n)
             {
                 @include fade-in ((0.3 * $j) + s);
@@ -60,6 +65,7 @@
 
         &__tiret
         {
+            //Trait de soulignement
             position: relative;
             width: 3rem;
             height: 0.2rem;
@@ -120,11 +126,11 @@
                 &__prix
                 {
                     font-weight: bold;
-                    //align-self: flex-end;
                     justify-self: flex-end;
                     margin-right: 5px;
                     font-size: 0.8rem;
-                    transform: translateX(5vh);
+                    //Animation pour décalage du prix
+                    transform: translateX(100%);
                     transition-property: transform;
                     transition-duration: 0.3s;
                     transition-timing-function: ease-in-out;
@@ -132,7 +138,6 @@
 
                 &__check
                 {
-                    //box-sizing: border-box;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -140,6 +145,7 @@
                     width: 100px;
                     height: 80px;
                     border-radius: 0 25px 25px 0;
+                    //Animation pour décalage du bloc séléction
                     transform: translatex(100%);
                     transition-property: transform;
                     transition-duration: 0.3s;
@@ -153,22 +159,26 @@
 
                     &:active
                     {
+                        //Changement de couleur sur clic du bloc sélection.
                         background: $Couleur-primaire;
                     }
                 }
 
                 &:hover
                 {
+                    //Ombre plus marquée sur survol
                     box-shadow: $ombre-hover;
                 }
 
                 &:hover &__prix
                 {
+                    //animation décalage décaler le prix sur la gauche 
                     transform: translatex(0);
                 }
 
                 &:hover &__check
                 {
+                    //animation pour faire aparaitre le bloc séléction
                     transform: translatex(0);
                 }
 

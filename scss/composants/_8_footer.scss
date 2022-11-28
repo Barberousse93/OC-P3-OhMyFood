@@ -7,8 +7,10 @@
     display: flex;
     flex-direction: column;
 
+
     @include media-min-768
     {
+        //Orientation en colonne en mode smartphone, en ligne en mode tablette et PC
         flex-direction: row;
         align-items: center;
         justify-content: space-between;

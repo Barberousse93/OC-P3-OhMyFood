@@ -2,22 +2,16 @@
   0% {
     transform: rotate(0deg);
   }
-  50% {
+  50%, 100% {
     transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
-  50% {
+  50%, 100% {
     transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 @-webkit-keyframes clignoter {
@@ -84,10 +78,10 @@
 }
 @-webkit-keyframes reduire {
   0% {
-    opacity: 0.3;
+    opacity: 0.5;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.3;
   }
   100% {
     transform: scale(0) rotate(360deg);
@@ -96,10 +90,10 @@
 }
 @keyframes reduire {
   0% {
-    opacity: 0.3;
+    opacity: 0.5;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.3;
   }
   100% {
     transform: scale(0) rotate(360deg);
@@ -233,27 +227,12 @@ html {
           animation-iteration-count: 1;
   -webkit-animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
           animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
 .loader__titre__2 {
-  font-size: 3em;
-  -webkit-animation-name: saut;
-          animation-name: saut;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
-          animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-}
-.loader__titre__3 {
   font-size: 3em;
   -webkit-animation-name: saut;
           animation-name: saut;
@@ -268,37 +247,22 @@ html {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
+.loader__titre__3 {
+  font-size: 3em;
+  -webkit-animation-name: saut;
+          animation-name: saut;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+          animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
 .loader__titre__4 {
-  font-size: 3em;
-  -webkit-animation-name: saut;
-          animation-name: saut;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
-          animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-}
-.loader__titre__5 {
-  font-size: 3em;
-  -webkit-animation-name: saut;
-          animation-name: saut;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
-          animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-}
-.loader__titre__6 {
   font-size: 3em;
   -webkit-animation-name: saut;
           animation-name: saut;
@@ -313,6 +277,36 @@ html {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
+.loader__titre__5 {
+  font-size: 3em;
+  -webkit-animation-name: saut;
+          animation-name: saut;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+          animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+.loader__titre__6 {
+  font-size: 3em;
+  -webkit-animation-name: saut;
+          animation-name: saut;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+          animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
 .loader__titre__7 {
   font-size: 3em;
   -webkit-animation-name: saut;
@@ -323,8 +317,8 @@ html {
           animation-iteration-count: 1;
   -webkit-animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
           animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
+  -webkit-animation-delay: 1.05s;
+          animation-delay: 1.05s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
@@ -338,8 +332,8 @@ html {
           animation-iteration-count: 1;
   -webkit-animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
           animation-timing-function: cubic-bezier(0, 0.73, 0.8, 1.48);
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
@@ -399,12 +393,6 @@ body {
   align-items: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  /*&__input
-  {
-      //padding-top: 0.5rem;
-      //width: fit-content;
-
-  }*/
 }
 @media (min-width: 768px) {
   .localisation {
@@ -468,27 +456,6 @@ body {
   box-shadow: 10px 10px 10px lightgray;
   z-index: 0;
   transition: transform 0.3s, background-color 0.3 box-shadow 0.3s;
-  /*&::after
-      {
-          opacity: 1;
-          //border-radius: 30px;
-      }
-  }
-
-  &::after
-  {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: $Couleur-primaire;
-      opacity: 0;
-      z-index: -1;
-      transition: opacity 0.3s;
-      border-radius: 30px;
-  }*/
 }
 @media (min-width: 768px) {
   .description__btn {
@@ -507,7 +474,7 @@ body {
   box-shadow: 15px 15px 10px gray;
   background-color: #9356DC;
 }
-@media (min-width: 768px) {
+@media (min-width: 911px) {
   .description__btn:hover {
     -webkit-animation-name: vibrate;
             animation-name: vibrate;
@@ -590,15 +557,21 @@ body {
 .fonctionnement__bouton__btn:hover {
   transform: scale(1.15);
   box-shadow: 15px 15px 10px gray;
-  /*& .fonctionnement__bouton__btn__puce
-  {
-      animation-name: spin;
-      animation-iteration-count: 1;
-      animation-duration: 1s;
-  }*/
 }
 .fonctionnement__bouton__btn:hover i {
   color: #9356DC;
+}
+@media (min-width: 911px) {
+  .fonctionnement__bouton__btn:hover .fonctionnement__bouton__btn__puce {
+    -webkit-animation-name: spin;
+            animation-name: spin;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
 }
 
 .restaurants {
@@ -673,13 +646,16 @@ body {
   font-weight: bold;
   top: 15px;
   right: 15px;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
-  -webkit-animation-name: clignoter;
-          animation-name: clignoter;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  /*transition: none;*/
+}
+@media (min-width: 911px) {
+  .restaurants__cards__carte__photo__img__new {
+    -webkit-animation-duration: 0.8s;
+            animation-duration: 0.8s;
+    -webkit-animation-name: clignoter;
+            animation-name: clignoter;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
 }
 .restaurants__cards__carte__photo__img__new p {
   font-size: 0.7rem;
@@ -719,12 +695,15 @@ body {
           background-clip: text;
   color: transparent;
   font-weight: 900;
+  transition: transform 0.3s;
   -webkit-animation-name: spin;
           animation-name: spin;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .footer {
@@ -767,20 +746,11 @@ body {
   display: flex;
   position: relative;
   justify-items: center;
-  /*@include media-min-912
-  {
-      background-color: red;
-  }*/
 }
 .banniere__photo {
   margin: auto;
   width: 100vh;
   height: 25vh;
-  /*@include media-min-912
-  {
-      height: 50vh;
-
-  }*/
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -804,7 +774,9 @@ body {
 }
 @media (min-width: 768px) {
   .banniere__nom {
-    width: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 .banniere__nom__texte {
@@ -831,12 +803,15 @@ body {
           background-clip: text;
   color: transparent;
   font-weight: 900;
+  transition: transform 0.3s;
   -webkit-animation-name: spin;
           animation-name: spin;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .carte {
@@ -1292,7 +1267,7 @@ body {
   justify-self: flex-end;
   margin-right: 5px;
   font-size: 0.8rem;
-  transform: translateX(5vh);
+  transform: translateX(100%);
   transition-property: transform;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
@@ -1350,27 +1325,6 @@ body {
   box-shadow: 10px 10px 10px lightgray;
   z-index: 0;
   transition: transform 0.3s, background-color 0.3 box-shadow 0.3s;
-  /*&::after
-      {
-          opacity: 1;
-          //border-radius: 30px;
-      }
-  }
-
-  &::after
-  {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: $Couleur-primaire;
-      opacity: 0;
-      z-index: -1;
-      transition: opacity 0.3s;
-      border-radius: 30px;
-  }*/
 }
 @media (min-width: 768px) {
   .bouton__commander {
@@ -1389,7 +1343,7 @@ body {
   box-shadow: 15px 15px 10px gray;
   background-color: #9356DC;
 }
-@media (min-width: 768px) {
+@media (min-width: 911px) {
   .bouton__commander:hover {
     -webkit-animation-name: vibrate;
             animation-name: vibrate;

@@ -1,5 +1,6 @@
 .restaurants
 {
+    // Cartes de restaurants
     background-color: $Couleur-fond;
     display: flex;
     flex-direction: column;
@@ -13,6 +14,7 @@
 
     &__cards
     {
+        // Affichage sur une colonne en mode smartphone, 2 colonnes en mode tablette et sur une ligne en mode PC
         display: flex;
         flex-direction: column;
 
@@ -21,14 +23,12 @@
             flex-direction: row;
             justify-content: space-evenly;
             flex-wrap: wrap;
-
         }
 
         @include media-min-912
         {
             flex-wrap: nowrap;
         }
-
 
         &__carte
         {
@@ -44,12 +44,14 @@
 
             @include media-min-768
             {
+                //Redimensionnement des cartes ( 1 carte = 40% de la largeur de l'écran => 2 colonnes
                 width: 40vw;
 
             }
 
             @include media-min-912
             {
+                //Redimensionnement des cartes ( 1 carte = 20% de la largeur de l'écran => une ligne
                 width: 20vw;
 
             }
@@ -57,11 +59,14 @@
 
             &:hover
             {
+                //Ombre plus marquée au survol
                 box-shadow: $ombre-hover;
             }
 
             &__photo
             {
+
+                //Dimenssionnement photo restaurant
                 &__img
                 {
                     position: relative;
@@ -77,6 +82,7 @@
 
                     &__new
                     {
+                        //indicateur "Nouveau"
                         z-index: 1;
                         display: block;
                         position: absolute;
@@ -87,11 +93,15 @@
                         font-weight: bold;
                         top: 15px;
                         right: 15px;
-                        animation-duration: .8s;
-                        animation-name: clignoter;
-                        animation-iteration-count: infinite;
 
-                        /*transition: none;*/
+                        @include media-min-912
+                        {
+                            //"clignote" en mode tablette et PC
+                            animation-duration: .8s;
+                            animation-name: clignoter;
+                            animation-iteration-count: infinite;
+                        }
+
                         & p
                         {
                             font-size: 0.7rem
@@ -102,6 +112,7 @@
 
             &__description
             {
+                //Nom et localisation du restaurant
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -119,7 +130,6 @@
 
                     & p
                     {
-                        //margin-top: 5px;
                         margin-bottom: 0.5rem;
                         font-size: 0.7rem
                     }
@@ -127,6 +137,7 @@
 
                 &__favori
                 {
+                    //icône "coeur" (cf. : _mixins.scss)
                     @include icone_favori;
                 }
             }

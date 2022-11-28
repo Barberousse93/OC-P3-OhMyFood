@@ -1,5 +1,6 @@
 .loader
 {
+    //Fond du loader
     position: fixed;
     inset: 0;
     background-color: white;
@@ -13,6 +14,7 @@
 
     &__titre
     {
+        // Saut lettre par lettre
         position: absolute;
         top: 50%;
         left: 50%;
@@ -22,6 +24,7 @@
         justify-content: center;
         line-height: 50px;
 
+        // Décalage de chaque animation de $delai * indice de la oucle (de 1 à 8)
         @for $i from 1 through 8
         {
             &__#{$i}

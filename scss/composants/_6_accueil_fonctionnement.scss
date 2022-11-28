@@ -1,5 +1,6 @@
 .fonctionnement
 {
+    // Description du fonctionnement du site. 
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -8,6 +9,7 @@
     {
         @include media-min-912
         {
+            //En colonne jusqu'à 912px de large, en ligne au dessus
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -28,11 +30,11 @@
 
         @include media-min-912
         {
+            // Largeur des boutons en mode tablette + PC
             width: 25vw;
         }
 
         margin: auto;
-
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -90,12 +92,18 @@
                     color: $Couleur-primaire;
                 }
 
-                /*& .fonctionnement__bouton__btn__puce
+                @include media-min-912
                 {
-                    animation-name: spin;
-                    animation-iteration-count: 1;
-                    animation-duration: 1s;
-                }*/
+
+                    //Animation des puces des boutons numérotés en mode tablette et PC
+                    & .fonctionnement__bouton__btn__puce
+                    {
+                        animation-name: spin;
+                        animation-iteration-count: 1;
+                        animation-duration: 1s;
+                        animation-timing-function: ease-in-out;
+                    }
+                }
             }
 
         }

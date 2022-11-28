@@ -4,27 +4,17 @@
     position: relative;
     justify-items: center;
 
-    /*@include media-min-912
-    {
-        background-color: red;
-    }*/
-
     &__photo
     {
         margin: auto;
         width: 100vh;
         height: 25vh;
 
-        /*@include media-min-912
-        {
-            height: 50vh;
-
-        }*/
-
         object-fit: cover;
 
         @include media-min-768
         {
+            //Coins arrondis en mode tablette et PC
             border-radius: 30px;
         }
     }
@@ -45,8 +35,9 @@
 
         @include media-min-768
         {
-            width: auto;
-            //bottom: calc(-25vh + 5vh);
+            // largeur du nom + favori s'adapte au contenu en mode tablette et PC            
+            width: fit-content;
+
         }
 
 

@@ -1,5 +1,6 @@
 .localisation
 {
+    // Zonede saisie de recherche + icoônz "localisation"
     background: linear-gradient(darken($Couleur-fond, 20%) 10%, 20%, darken($Couleur-fond, 5%) 90%);
     position: relative;
     display: flex;
@@ -23,13 +24,6 @@
         margin-left: 1rem;
         margin-right: 1rem;
     }
-
-    /*&__input
-    {
-        //padding-top: 0.5rem;
-        //width: fit-content;
-
-    }*/
 
     &__input--saisie
     {

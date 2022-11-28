@@ -1,5 +1,6 @@
 @mixin anim-loader ($delay)
 {
+    // Animation lettre à lettre. Paramètre animation-delay
     animation-name: saut;
     animation-duration: 0.2s;
     animation-iteration-count: 1;
@@ -10,6 +11,7 @@
 
 @mixin anim_fondu
 {
+    //Animation fondu
     animation-name: fondu_out;
     animation-delay: 2s;
     animation-duration: 2s;
@@ -18,6 +20,7 @@
 
 @mixin icone_favori
 {
+    // gestion de l'icône "coeur"
     display: flex;
     align-items: center;
     padding: 15px;
@@ -32,13 +35,16 @@
 
         &:hover
         {
+            // sur survol, animation remplissage du coeur plus rotation un tour
             background: linear-gradient($Couleur-primaire, $Couleur-secondaire);
             background-clip: text;
             color: transparent;
             font-weight: 900;
+            transition: transform 0.3s;
             animation-name: spin;
             animation-iteration-count: 1;
-            animation-duration: 0.3s;
+            animation-duration: 0.4s;
+            animation-timing-function: ease-in-out;
         }
 
     }
@@ -64,6 +70,7 @@
 
     @include media-min-768
     {
+        //Animation supplémentaires en mode tablette et PC
         animation-name: pulsation;
         animation-duration: 2s;
         animation-iteration-count: infinite;
@@ -77,37 +84,15 @@
         box-shadow: $ombre-hover;
         background-color: $Couleur-primaire;
 
-        @include media-min-768
+        @include media-min-912
         {
+            //Animation supplémentaires en mode PC
             animation-name: vibrate;
             animation-duration: 0.3s;
             animation-iteration-count: 1;
             animation-timing-function: cubic-bezier(1, 0, 0, 1);
         }
     }
-
-
-    /*&::after
-        {
-            opacity: 1;
-            //border-radius: 30px;
-        }
-    }
-
-    &::after
-    {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: $Couleur-primaire;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 0.3s;
-        border-radius: 30px;
-    }*/
 
     &:active
     {
@@ -119,6 +104,7 @@
 
 @mixin ellipsis
 {
+    //Texte tronqué si trop long
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -135,6 +121,8 @@
 
 @mixin media-min-768
 {
+
+    //Mode tablette : à partir de 768px de large
     @media (min-width:768px)
     {
         @content;
@@ -143,6 +131,8 @@
 
 @mixin media-min-912
 {
+
+    //Mode PC à partir de 912px de large
     @media (min-width:911px)
     {
         @content;
