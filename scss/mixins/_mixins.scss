@@ -1,14 +1,17 @@
 @mixin anim-loader ($delay)
 {
+    // Animation lettre à lettre. Paramètre animation-delay
     animation-name: saut;
     animation-duration: 0.2s;
     animation-iteration-count: 1;
     animation-timing-function: cubic-bezier(0, .73, .8, 1.48);
     animation-delay: $delay;
+    animation-fill-mode: backwards;
 }
 
 @mixin anim_fondu
 {
+    //Animation fondu
     animation-name: fondu_out;
     animation-delay: 2s;
     animation-duration: 2s;
@@ -17,6 +20,7 @@
 
 @mixin icone_favori
 {
+    // gestion de l'icône "coeur"
     display: flex;
     align-items: center;
     padding: 15px;
@@ -31,13 +35,16 @@
 
         &:hover
         {
+            // sur survol, animation remplissage du coeur plus rotation un tour
             background: linear-gradient($Couleur-primaire, $Couleur-secondaire);
             background-clip: text;
             color: transparent;
             font-weight: 900;
+            transition: transform 0.3s;
             animation-name: spin;
             animation-iteration-count: 1;
-            animation-duration: 0.3s;
+            animation-duration: 0.4s;
+            animation-timing-function: ease-in-out;
         }
 
     }
@@ -45,37 +52,59 @@
 
 @mixin bouton-couleur-primaire
 {
-    background-color: $Couleur-primaire;
+    background-color: $Couleur-secondaire;
     margin: auto;
-    font-size: 20px;
+    font-size: 0.8rem;
     font-weight: bold;
     color: white;
     text-align: center;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 30px;
     box-shadow: $ombre-repos;
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    z-index: 0;
+    transition: transform 0.3s, background-color 0.3 box-shadow 0.3s;
+
+    @include media-min-768
+    {
+        //Animation supplémentaires en mode tablette et PC
+        animation-name: pulsation;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0, .71, .47, 1);
+    }
+
 
     &:hover
     {
         transform: scale(1.05);
         box-shadow: $ombre-hover;
-        background-color: $Couleur-secondaire;
+        background-color: $Couleur-primaire;
+
+        @include media-min-912
+        {
+            //Animation supplémentaires en mode PC
+            animation-name: vibrate;
+            animation-duration: 0.3s;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+        }
     }
 
     &:active
     {
         transform: scale(1);
+
     }
 }
 
+
 @mixin ellipsis
 {
+    //Texte tronqué si trop long
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -87,5 +116,25 @@
     animation-duration: 0.5s;
     animation-delay: $delay;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
+}
+
+@mixin media-min-768
+{
+
+    //Mode tablette : à partir de 768px de large
+    @media (min-width:768px)
+    {
+        @content;
+    }
+}
+
+@mixin media-min-912
+{
+
+    //Mode PC à partir de 912px de large
+    @media (min-width:911px)
+    {
+        @content;
+    }
 }

@@ -1,0 +1,57 @@
+.banniere
+{
+    display: flex;
+    position: relative;
+    justify-items: center;
+
+    &__photo
+    {
+        margin: auto;
+        width: 100vh;
+        height: 25vh;
+
+        object-fit: cover;
+
+        @include media-min-768
+        {
+            //Coins arrondis en mode tablette et PC
+            border-radius: 30px;
+        }
+    }
+
+    &__nom
+    {
+        position: absolute;
+        background: $Couleur-fond;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: -5vh;
+
+        @include media-min-768
+        {
+            // largeur du nom + favori s'adapte au contenu en mode tablette et PC            
+            width: fit-content;
+
+        }
+
+
+        &__texte
+        {
+            position: relative;
+            text-align: center;
+            padding-left: 25px;
+            font-size: 1rem;
+        }
+
+        &__favori
+        {
+            @include icone_favori;
+        }
+    }
+}

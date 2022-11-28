@@ -4,6 +4,17 @@
     color: white;
     padding: 30px;
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+
+    @include media-min-768
+    {
+        //Orientation en colonne en mode smartphone, en ligne en mode tablette et PC
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     & h4
     {
@@ -21,6 +32,12 @@
         & i
         {
             margin-right: 10px;
+            font-size: 0.5rem;
+        }
+
+        & p
+        {
+            font-size: 0.7rem;
         }
     }
 

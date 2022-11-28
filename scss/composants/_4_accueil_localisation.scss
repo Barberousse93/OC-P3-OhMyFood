@@ -1,25 +1,37 @@
 .localisation
 {
+    // Zonede saisie de recherche + icoônz "localisation"
     background: linear-gradient(darken($Couleur-fond, 20%) 10%, 20%, darken($Couleur-fond, 5%) 90%);
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+
+    @include media-min-768
+    {
+        width: fit-content;
+        margin: auto;
+        border-radius: 30px;
+    }
 
     &__pin i
     {
-        font-size: 30px;
+        font-size: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     &__input--saisie
     {
         background-color: transparent;
         text-align: center;
-        font-size: 30px;
+        font-size: 0.8em;
         font-weight: bold;
         border: none;
-        width: 50vh;
+        width: 80%;
     }
 }

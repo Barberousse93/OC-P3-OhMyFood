@@ -1,6 +1,19 @@
 body
 {
     margin: auto;
-    max-width: 768px;
     position: relative;
+}
+
+:root
+{
+    // Taille de base de la police. Tous les font-size exprimés en"rem" seront proportionnels à cette valeur
+    font-size: 16pt;
+}
+
+*
+{
+    // CSS Reset
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

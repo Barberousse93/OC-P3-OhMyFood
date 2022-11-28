@@ -7,9 +7,10 @@
 
     &__retour
     {
+        //flèche retour vers la page d'accueil. Visible uniquement sur les pages "restau_x.html"
         position: absolute;
         font-size: 30px;
-        padding-left: 30px;
+        padding-left: 50px;
 
         & i
         {

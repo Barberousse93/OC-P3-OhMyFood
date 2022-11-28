@@ -1,34 +1,54 @@
 .fonctionnement
 {
+    // Description du fonctionnement du site. 
     display: flex;
     flex-direction: column;
     align-content: space-around;
 
+    & nav
+    {
+        @include media-min-912
+        {
+            //En colonne jusqu'à 912px de large, en ligne au dessus
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+        }
+    }
+
     & h2
     {
         margin-left: 15px;
+        font-size: 1rem;
+
     }
 
     &__bouton
     {
-        width: 70%;
-        margin: auto;
+        width: auto;
 
+        @include media-min-912
+        {
+            // Largeur des boutons en mode tablette + PC
+            width: 25vw;
+        }
+
+        margin: auto;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
 
         &__btn
         {
-            width: 70%;
+            width: 70vw;
             display: flex;
             flex-direction: row;
             align-items: center;
             margin: auto;
             margin-top: 20px;
-            margin-bottom: 20px;
-            padding-left: 15px;
-            padding-right: 15px;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
             background-color: $Couleur-fond;
             box-shadow: $ombre-repos;
             border-radius: 20px;
@@ -38,9 +58,7 @@
             {
                 position: relative;
                 right: 28px;
-                width: 18px;
-                height: 18px;
-                padding: 5px;
+                padding: 5px 10px;
                 font-family: roboto, sans-serif;
                 font-size: 18px;
                 font-weight: bold;
@@ -53,14 +71,14 @@
 
             & i
             {
-                font-size: 20px;
+                font-size: 1rem;
                 margin-right: 20px;
                 transition: color 0.3s
             }
 
             &__texte
             {
-                font-size: 20px;
+                font-size: 0.8rem;
                 font-weight: bold;
             }
 
@@ -74,12 +92,18 @@
                     color: $Couleur-primaire;
                 }
 
-                /*& .fonctionnement__bouton__btn__puce
+                @include media-min-912
                 {
-                    animation-name: spin;
-                    animation-iteration-count: 1;
-                    animation-duration: 1s;
-                }*/
+
+                    //Animation des puces des boutons numérotés en mode tablette et PC
+                    & .fonctionnement__bouton__btn__puce
+                    {
+                        animation-name: spin;
+                        animation-iteration-count: 1;
+                        animation-duration: 1s;
+                        animation-timing-function: ease-in-out;
+                    }
+                }
             }
 
         }

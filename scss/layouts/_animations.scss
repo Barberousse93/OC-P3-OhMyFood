@@ -1,23 +1,23 @@
 @keyframes spin
 {
+
+  // Rotation 1 tour
   0%
   {
     transform: rotate(0deg);
   }
 
-  50%
-  {
-    transform: rotate(360deg);
-  }
-
+  50%,
   100%
   {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes clignoter
 {
+
+  //Clignotement
   0%
   {
     opacity: 1;
@@ -36,6 +36,8 @@
 
 @keyframes fondu_out
 {
+
+  //Fondu opaque=>transparent
   0%
   {
     opacity: 1;
@@ -51,6 +53,8 @@
 
 @keyframes saut
 {
+
+  // Déplacement vers le haut, grossisment 1.5 fois et rtotaion un tour
   0%
   {
     transform: translateY(0) scale(1) rotate(0deg);
@@ -69,14 +73,16 @@
 
 @keyframes reduire
 {
+
+  // fondu opaque=> transparent avec réduction d'échelle à zéro plus rotation un tour.
   0%
   {
-    opacity: 0.3;
+    opacity: 0.5;
   }
 
   50%
   {
-    opacity: 0.5;
+    opacity: 0.3;
   }
 
   100%
@@ -91,5 +97,61 @@
   100%
   {
     opacity: 1;
+  }
+}
+
+@keyframes pulsation
+{
+
+  //Animation coeur qui bat
+  0%
+  {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50%
+  {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  100%
+  {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+}
+
+@keyframes vibrate
+{
+
+  //Animation vibration
+  0%
+  {
+    transform: scale(1);
+  }
+
+  10%,
+  20%
+  {
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90%
+  {
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  40%,
+  60%,
+  80%
+  {
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  100%
+  {
+    transform: scale(1);
   }
 }
