@@ -6,22 +6,25 @@
     align-items: center;
     position: relative;
     width: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     &__1
     {
         position: relative;
-        font-size: 30px;
+        font-size: 1rem;
         font-weight: bold;
         text-align: center;
+        margin-bottom: 1rem;
     }
 
     &__2
     {
 
-        font-size: 20px;
+        font-size: 0.8rem;
         text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     &__btn

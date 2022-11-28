@@ -48,12 +48,11 @@
 {
     background-color: $Couleur-secondaire;
     margin: auto;
-    font-size: 20px;
+    font-size: 0.8rem;
     font-weight: bold;
     color: white;
     text-align: center;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 15px;
@@ -62,10 +61,14 @@
     box-shadow: $ombre-repos;
     z-index: 0;
     transition: transform 0.3s, background-color 0.3 box-shadow 0.3s;
-    animation-name: pulsation;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0,.71,.47,1);
+
+    @include media-min-768
+    {
+        animation-name: pulsation;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0, .71, .47, 1);
+    }
 
 
     &:hover
@@ -73,13 +76,18 @@
         transform: scale(1.05);
         box-shadow: $ombre-hover;
         background-color: $Couleur-primaire;
-        animation-name: vibrate;
-        animation-duration: 0.3s;
-        animation-iteration-count: 1;
-        animation-timing-function: cubic-bezier(1, 0, 0, 1);
+
+        @include media-min-768
+        {
+            animation-name: vibrate;
+            animation-duration: 0.3s;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+        }
+    }
 
 
-        /*&::after
+    /*&::after
         {
             opacity: 1;
             //border-radius: 30px;
@@ -101,13 +109,13 @@
         border-radius: 30px;
     }*/
 
-        &:active
-        {
-            transform: scale(1);
-            
-        }
+    &:active
+    {
+        transform: scale(1);
+
     }
 }
+
 
 @mixin ellipsis
 {
@@ -123,4 +131,20 @@
     animation-delay: $delay;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+}
+
+@mixin media-min-768
+{
+    @media (min-width:768px)
+    {
+        @content;
+    }
+}
+
+@mixin media-min-912
+{
+    @media (min-width:911px)
+    {
+        @content;
+    }
 }

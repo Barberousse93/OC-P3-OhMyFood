@@ -6,26 +6,29 @@
 
     & nav
     {
-        @media (min-width:768px)
+        @include media-min-912
         {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
+
         }
     }
 
     & h2
     {
         margin-left: 15px;
+        font-size: 1rem;
+
     }
 
     &__bouton
     {
         width: auto;
 
-        @media (min-width:768px)
+        @include media-min-912
         {
-            width: 30vw;
+            width: 25vw;
         }
 
         margin: auto;
@@ -42,9 +45,8 @@
             align-items: center;
             margin: auto;
             margin-top: 20px;
-            margin-bottom: 20px;
-            padding-left: 15px;
-            padding-right: 15px;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
             background-color: $Couleur-fond;
             box-shadow: $ombre-repos;
             border-radius: 20px;
@@ -54,9 +56,7 @@
             {
                 position: relative;
                 right: 28px;
-                width: 18px;
-                height: 18px;
-                padding: 5px;
+                padding: 5px 10px;
                 font-family: roboto, sans-serif;
                 font-size: 18px;
                 font-weight: bold;
@@ -69,14 +69,14 @@
 
             & i
             {
-                font-size: 20px;
+                font-size: 1rem;
                 margin-right: 20px;
                 transition: color 0.3s
             }
 
             &__texte
             {
-                font-size: 2vh;
+                font-size: 0.8rem;
                 font-weight: bold;
             }
 
