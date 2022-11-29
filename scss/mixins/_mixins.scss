@@ -52,7 +52,8 @@
 
 @mixin bouton-couleur-primaire
 {
-    background-color: $Couleur-secondaire;
+    background: linear-gradient($Couleur-primaire, $Couleur-secondaire);
+    position: relative;
     margin: auto;
     font-size: 0.8rem;
     font-weight: bold;
@@ -65,8 +66,8 @@
     margin-bottom: 15px;
     border-radius: 30px;
     box-shadow: $ombre-repos;
-    z-index: 0;
-    transition: transform 0.3s, background-color 0.3 box-shadow 0.3s;
+    z-index: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
 
     @include media-min-768
     {
@@ -80,9 +81,14 @@
 
     &:hover
     {
+        &::after
+        {
+            content: "";
+            opacity: 1;
+        }
+
         transform: scale(1.05);
         box-shadow: $ombre-hover;
-        background-color: $Couleur-primaire;
 
         @include media-min-912
         {
@@ -92,6 +98,22 @@
             animation-iteration-count: 1;
             animation-timing-function: cubic-bezier(1, 0, 0, 1);
         }
+    }
+
+    &::after
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        z-index: -1;
+        background: linear-gradient($Couleur-secondaire, $Couleur-primaire);
+        border-radius: 30px;
+        transition: opacity 0.3s;
+
     }
 
     &:active

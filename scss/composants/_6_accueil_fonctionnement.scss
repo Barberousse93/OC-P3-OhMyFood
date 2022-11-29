@@ -52,7 +52,7 @@
             background-color: $Couleur-fond;
             box-shadow: $ombre-repos;
             border-radius: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 
             &__puce
             {
@@ -86,6 +86,7 @@
             {
                 transform: scale(1.15);
                 box-shadow: $ombre-hover;
+                background-color: lighten($Couleur-primaire, 35%);
 
                 & i
                 {

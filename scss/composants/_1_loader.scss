@@ -6,6 +6,7 @@
     background-color: white;
     height: 100vh;
     z-index: 2;
+    opacity: 0.85;
     animation-name: reduire;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -23,6 +24,8 @@
         flex-direction: row;
         justify-content: center;
         line-height: 50px;
+        z-index: 3;
+        opacity: 1;
 
         // Décalage de chaque animation de $delai * indice de la oucle (de 1 à 8)
         @for $i from 1 through 8
@@ -45,5 +48,6 @@
         left: 50%;
         top: 60vh;
         transform: translate(-50%, -50%);
+        z-index: 3;
     }
 }
