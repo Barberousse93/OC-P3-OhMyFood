@@ -78,7 +78,7 @@
 }
 @-webkit-keyframes reduire {
   0% {
-    opacity: 0.5;
+    opacity: 0.8;
   }
   50% {
     opacity: 0.3;
@@ -90,7 +90,7 @@
 }
 @keyframes reduire {
   0% {
-    opacity: 0.5;
+    opacity: 0.8;
   }
   50% {
     opacity: 0.3;
@@ -196,6 +196,7 @@ html {
   background-color: white;
   height: 100vh;
   z-index: 2;
+  opacity: 0.85;
   -webkit-animation-name: reduire;
           animation-name: reduire;
   -webkit-animation-duration: 0.5s;
@@ -216,6 +217,8 @@ html {
   flex-direction: row;
   justify-content: center;
   line-height: 50px;
+  z-index: 3;
+  opacity: 1;
 }
 .loader__titre__1 {
   font-size: 3em;
@@ -346,6 +349,7 @@ html {
   left: 50%;
   top: 60vh;
   transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 body {
@@ -441,7 +445,8 @@ body {
   margin-right: 10px;
 }
 .description__btn {
-  background-color: #FF79DA;
+  background: linear-gradient(#9356DC, #FF79DA);
+  position: relative;
   margin: auto;
   font-size: 0.8rem;
   font-weight: bold;
@@ -454,8 +459,8 @@ body {
   margin-bottom: 15px;
   border-radius: 30px;
   box-shadow: 10px 10px 10px lightgray;
-  z-index: 0;
-  transition: transform 0.3s, background-color 0.3 box-shadow 0.3s;
+  z-index: 1;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 @media (min-width: 768px) {
   .description__btn {
@@ -472,7 +477,10 @@ body {
 .description__btn:hover {
   transform: scale(1.05);
   box-shadow: 15px 15px 10px gray;
-  background-color: #9356DC;
+}
+.description__btn:hover::after {
+  content: "";
+  opacity: 1;
 }
 @media (min-width: 911px) {
   .description__btn:hover {
@@ -485,6 +493,19 @@ body {
     -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
             animation-timing-function: cubic-bezier(1, 0, 0, 1);
   }
+}
+.description__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  transition: opacity 0.3s;
 }
 .description__btn:active {
   transform: scale(1);
@@ -530,7 +551,7 @@ body {
   background-color: #f7f7f7;
   box-shadow: 10px 10px 10px lightgray;
   border-radius: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 .fonctionnement__bouton__btn__puce {
   position: relative;
@@ -557,6 +578,7 @@ body {
 .fonctionnement__bouton__btn:hover {
   transform: scale(1.15);
   box-shadow: 15px 15px 10px gray;
+  background-color: #f2eafb;
 }
 .fonctionnement__bouton__btn:hover i {
   color: #9356DC;
@@ -770,7 +792,7 @@ body {
   border-radius: 30px;
   left: 50%;
   transform: translate(-50%, 0);
-  bottom: -5vh;
+  bottom: -1.5rem;
 }
 @media (min-width: 768px) {
   .banniere__nom {
@@ -1265,9 +1287,10 @@ body {
 .carte__menu__liste__element__prix {
   font-weight: bold;
   justify-self: flex-end;
+  margin-top: 1.2rem;
   margin-right: 5px;
   font-size: 0.8rem;
-  transform: translateX(100%);
+  transform: translateX(150%);
   transition-property: transform;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
@@ -1287,7 +1310,7 @@ body {
 }
 .carte__menu__liste__element__check i {
   color: white;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 .carte__menu__liste__element__check:active {
   background: #9356DC;
@@ -1301,6 +1324,18 @@ body {
 .carte__menu__liste__element:hover .carte__menu__liste__element__check {
   transform: translatex(0);
 }
+.carte__menu__liste__element:hover .carte__menu__liste__element__check i {
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
 
 .bouton {
   background: #f7f7f7;
@@ -1310,7 +1345,8 @@ body {
   height: 80px;
 }
 .bouton__commander {
-  background-color: #FF79DA;
+  background: linear-gradient(#9356DC, #FF79DA);
+  position: relative;
   margin: auto;
   font-size: 0.8rem;
   font-weight: bold;
@@ -1323,8 +1359,8 @@ body {
   margin-bottom: 15px;
   border-radius: 30px;
   box-shadow: 10px 10px 10px lightgray;
-  z-index: 0;
-  transition: transform 0.3s, background-color 0.3 box-shadow 0.3s;
+  z-index: 1;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 @media (min-width: 768px) {
   .bouton__commander {
@@ -1341,7 +1377,10 @@ body {
 .bouton__commander:hover {
   transform: scale(1.05);
   box-shadow: 15px 15px 10px gray;
-  background-color: #9356DC;
+}
+.bouton__commander:hover::after {
+  content: "";
+  opacity: 1;
 }
 @media (min-width: 911px) {
   .bouton__commander:hover {
@@ -1354,6 +1393,19 @@ body {
     -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
             animation-timing-function: cubic-bezier(1, 0, 0, 1);
   }
+}
+.bouton__commander::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  transition: opacity 0.3s;
 }
 .bouton__commander:active {
   transform: scale(1);
