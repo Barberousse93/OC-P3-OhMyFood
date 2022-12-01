@@ -11,19 +11,7 @@
         //Affichage en ligne en mode tablette et PC
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    & li
-    {
-        //Point de départ de l'animation
-        opacity: 0;
-    }
-
-    & ul
-    {
-        //Suppression des puces 
-        list-style-type: none;
+        justify-content: space-around;
     }
 
     & h2
@@ -39,27 +27,20 @@
         flex-direction: column;
         margin: 10px;
         opacity: 0;
+        transform: translatey(50px);
 
         @include media-min-768
         {
-            width: 30vw;
+            width: 30%;
         }
 
         @for $j from 1 to 4
         {
 
-            //Animation : Apparition progressive des composante des menus et des éléments des compsantes
+            //Animation : Apparition progressive des composante des menus 
             &:nth-child(#{$j}n)
             {
                 @include fade-in ((0.3 * $j) + s);
-
-                @for $i from 1 to 10
-                {
-                    li:nth-child(#{$i}n)
-                    {
-                        @include fade-in ((0.2 * $i * $j) + s);
-                    }
-                }
             }
         }
 
@@ -74,11 +55,9 @@
 
         &__liste
         {
-            box-sizing: border-box;
-
-
             &__element
             {
+                position: relative;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -88,7 +67,9 @@
                 box-shadow: $ombre-repos;
                 margin-top: 15px;
                 overflow: hidden;
-
+                height: 80px;
+                opacity: 0;
+                transform: translateY(50px);
 
                 &__description
                 {
@@ -98,9 +79,12 @@
                     margin-left: 0.8rem;
                     margin-right: 0.8rem;
                     @include ellipsis;
+                    transition: width 0.5s;
 
-                    & h3
+                    &__nom
                     {
+                        //width: 100%;
+                        transition: width 0.5s;
                         font-size: 0.8rem;
                         margin-top: 0;
                         margin-bottom: 10px;
@@ -109,17 +93,19 @@
 
                     &__bloc
                     {
+                        transition: width 0.5s;
+                        width: 100%;
                         display: flex;
-                        flex-direction: row;
                         justify-content: space-between;
+                        align-items: center;
 
 
-                        & p
+                        &__texte
                         {
                             font-size: 0.7rem;
                             margin-top: 0;
                             margin-bottom: 0;
-                            width: 700px;
+                            //width: 700px;
                             @include ellipsis;
                         }
                     }
@@ -128,31 +114,22 @@
                 &__prix
                 {
                     font-weight: bold;
-                    justify-self: flex-end;
-                    margin-top: 1.2rem;
-                    margin-right: 5px;
+                    margin-right: 0.5rem;
+                    margin-left: 5px;
                     font-size: 0.8rem;
-                    //Animation pour décalage du prix
-                    transform: translateX(150%);
-                    transition-property: transform;
-                    transition-duration: 0.3s;
-                    transition-timing-function: ease-in-out;
                 }
 
                 &__check
                 {
+                    position: absolute;
+                    right: -100px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     background-color: $Couleur-tertiaire;
                     width: 100px;
-                    height: 80px;
+                    height: 100%;
                     border-radius: 0 25px 25px 0;
-                    //Animation pour décalage du bloc séléction
-                    transform: translatex(100%);
-                    transition-property: transform;
-                    transition-duration: 0.3s;
-                    transition-timing-function: ease-in-out;
 
                     & i
                     {
@@ -173,28 +150,49 @@
                     box-shadow: $ombre-hover;
                 }
 
-                &:hover &__prix
-                {
-                    //animation décalage décaler le prix sur la gauche 
-                    transform: translatex(0);
-                }
-
                 &:hover &__check
                 {
-                    //animation pour faire aparaitre le bloc séléction
-                    transform: translatex(0);
+                    animation-name: check;
+                    animation-duration: 0.2s;
+                    animation-timing-function: ease-in;
+                    animation-fill-mode: forwards;
+                    animation-delay: 0.1s;
 
                     & i
                     {
                         animation-name: spin;
-                        animation-duration: 0.3s;
+                        animation-duration: 0.5s;
                         animation-timing-function: ease-in-out;
-                        animation-delay: 0.3s;
+                        animation-delay: 0.2s;
                         animation-iteration-count: 1;
                     }
-
                 }
 
+                &:hover &__description,
+                &:hover &__description__nom,
+                &:hover &__description__bloc
+                {
+                    width: calc(100vw - 9rem);
+
+                    @include media-min-768
+                    {
+                        width: calc(33vw - 7.2rem);
+                    }
+
+                    @include media-min-912
+                    {
+                        width: calc(33vw - 8rem);
+                    }
+                }
+            }
+
+            //Apparition progressive des eléments des menus
+            @for $i from 1 to 10
+            {
+                & :nth-child(#{$i}n)
+                {
+                    @include fade-in ((0.2 * $i) + s);
+                }
             }
 
         }

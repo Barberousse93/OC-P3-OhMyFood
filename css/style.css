@@ -103,11 +103,13 @@
 @-webkit-keyframes fade-in {
   100% {
     opacity: 1;
+    transform: translatey(0);
   }
 }
 @keyframes fade-in {
   100% {
     opacity: 1;
+    transform: translatey(0);
   }
 }
 @-webkit-keyframes pulsation {
@@ -164,6 +166,22 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@-webkit-keyframes check {
+  0%, 50% {
+    transform: translateX(-50x);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+@keyframes check {
+  0%, 50% {
+    transform: translateX(-50x);
+  }
+  100% {
+    transform: translateX(-100px);
   }
 }
 h1,
@@ -847,14 +865,8 @@ body {
   .carte {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
-}
-.carte li {
-  opacity: 0;
-}
-.carte ul {
-  list-style-type: none;
 }
 .carte h2 {
   font-size: 0.8rem;
@@ -866,10 +878,11 @@ body {
   flex-direction: column;
   margin: 10px;
   opacity: 0;
+  transform: translatey(50px);
 }
 @media (min-width: 768px) {
   .carte__menu {
-    width: 30vw;
+    width: 30%;
   }
 }
 .carte__menu:nth-child(1n) {
@@ -879,114 +892,6 @@ body {
           animation-duration: 0.5s;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(1n) li:nth-child(1n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(1n) li:nth-child(2n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(1n) li:nth-child(3n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(1n) li:nth-child(4n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(1n) li:nth-child(5n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(1n) li:nth-child(6n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(1n) li:nth-child(7n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(1n) li:nth-child(8n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(1n) li:nth-child(9n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: both;
@@ -1004,114 +909,6 @@ body {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.carte__menu:nth-child(2n) li:nth-child(1n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(2n) li:nth-child(2n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(2n) li:nth-child(3n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(2n) li:nth-child(4n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(2n) li:nth-child(5n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(2n) li:nth-child(6n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(2n) li:nth-child(7n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(2n) li:nth-child(8n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 3.2s;
-          animation-delay: 3.2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(2n) li:nth-child(9n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 3.6s;
-          animation-delay: 3.6s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
 .carte__menu:nth-child(3n) {
   -webkit-animation-name: fade-in;
           animation-name: fade-in;
@@ -1124,124 +921,14 @@ body {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.carte__menu:nth-child(3n) li:nth-child(1n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(3n) li:nth-child(2n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(3n) li:nth-child(3n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(3n) li:nth-child(4n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(3n) li:nth-child(5n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(3n) li:nth-child(6n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 3.6s;
-          animation-delay: 3.6s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(3n) li:nth-child(7n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 4.2s;
-          animation-delay: 4.2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(3n) li:nth-child(8n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 4.8s;
-          animation-delay: 4.8s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.carte__menu:nth-child(3n) li:nth-child(9n) {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 5.4s;
-          animation-delay: 5.4s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
 .carte__menu__tiret {
   position: relative;
   width: 3rem;
   height: 0.2rem;
   background: #99E2D0;
 }
-.carte__menu__liste {
-  box-sizing: border-box;
-}
 .carte__menu__liste__element {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1251,6 +938,9 @@ body {
   box-shadow: 10px 10px 10px lightgray;
   margin-top: 15px;
   overflow: hidden;
+  height: 80px;
+  opacity: 0;
+  transform: translateY(50px);
 }
 .carte__menu__liste__element__description {
   width: 100%;
@@ -1261,8 +951,10 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: width 0.5s;
 }
-.carte__menu__liste__element__description h3 {
+.carte__menu__liste__element__description__nom {
+  transition: width 0.5s;
   font-size: 0.8rem;
   margin-top: 0;
   margin-bottom: 10px;
@@ -1271,42 +963,36 @@ body {
   text-overflow: ellipsis;
 }
 .carte__menu__liste__element__description__bloc {
+  transition: width 0.5s;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
-.carte__menu__liste__element__description__bloc p {
+.carte__menu__liste__element__description__bloc__texte {
   font-size: 0.7rem;
   margin-top: 0;
   margin-bottom: 0;
-  width: 700px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .carte__menu__liste__element__prix {
   font-weight: bold;
-  justify-self: flex-end;
-  margin-top: 1.2rem;
-  margin-right: 5px;
+  margin-right: 0.5rem;
+  margin-left: 5px;
   font-size: 0.8rem;
-  transform: translateX(150%);
-  transition-property: transform;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
 }
 .carte__menu__liste__element__check {
+  position: absolute;
+  right: -100px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;
   width: 100px;
-  height: 80px;
+  height: 100%;
   border-radius: 0 25px 25px 0;
-  transform: translatex(100%);
-  transition-property: transform;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
 }
 .carte__menu__liste__element__check i {
   color: white;
@@ -1318,23 +1004,150 @@ body {
 .carte__menu__liste__element:hover {
   box-shadow: 15px 15px 10px gray;
 }
-.carte__menu__liste__element:hover .carte__menu__liste__element__prix {
-  transform: translatex(0);
-}
 .carte__menu__liste__element:hover .carte__menu__liste__element__check {
-  transform: translatex(0);
+  -webkit-animation-name: check;
+          animation-name: check;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 .carte__menu__liste__element:hover .carte__menu__liste__element__check i {
   -webkit-animation-name: spin;
           animation-name: spin;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+}
+.carte__menu__liste__element:hover .carte__menu__liste__element__description, .carte__menu__liste__element:hover .carte__menu__liste__element__description__nom, .carte__menu__liste__element:hover .carte__menu__liste__element__description__bloc {
+  width: calc(100vw - 9rem);
+}
+@media (min-width: 768px) {
+  .carte__menu__liste__element:hover .carte__menu__liste__element__description, .carte__menu__liste__element:hover .carte__menu__liste__element__description__nom, .carte__menu__liste__element:hover .carte__menu__liste__element__description__bloc {
+    width: calc(33vw - 7.2rem);
+  }
+}
+@media (min-width: 911px) {
+  .carte__menu__liste__element:hover .carte__menu__liste__element__description, .carte__menu__liste__element:hover .carte__menu__liste__element__description__nom, .carte__menu__liste__element:hover .carte__menu__liste__element__description__bloc {
+    width: calc(33vw - 8rem);
+  }
+}
+.carte__menu__liste :nth-child(1n) {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.carte__menu__liste :nth-child(2n) {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.carte__menu__liste :nth-child(3n) {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.carte__menu__liste :nth-child(4n) {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.carte__menu__liste :nth-child(5n) {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.carte__menu__liste :nth-child(6n) {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.carte__menu__liste :nth-child(7n) {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.carte__menu__liste :nth-child(8n) {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.carte__menu__liste :nth-child(9n) {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .bouton {
