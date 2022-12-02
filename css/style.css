@@ -1038,7 +1038,7 @@ body {
 }
 @media (min-width: 911px) {
   .carte__menu__liste__element:hover .carte__menu__liste__element__description, .carte__menu__liste__element:hover .carte__menu__liste__element__description__nom, .carte__menu__liste__element:hover .carte__menu__liste__element__description__bloc {
-    width: calc(33vw - 8rem);
+    width: calc(33vw - 8.5rem);
   }
 }
 .carte__menu__liste :nth-child(1n) {
