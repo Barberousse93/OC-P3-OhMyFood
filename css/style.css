@@ -169,17 +169,11 @@
   }
 }
 @-webkit-keyframes check {
-  0%, 50% {
-    transform: translateX(-50x);
-  }
   100% {
     transform: translateX(-100px);
   }
 }
 @keyframes check {
-  0%, 50% {
-    transform: translateX(-50x);
-  }
   100% {
     transform: translateX(-100px);
   }
