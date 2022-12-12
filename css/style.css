@@ -730,14 +730,18 @@ body {
   color: transparent;
   font-weight: 900;
   transition: transform 0.3s;
-  -webkit-animation-name: spin;
-          animation-name: spin;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+}
+@media (min-width: 768px) {
+  .restaurants__cards__carte__description__favori i:hover {
+    -webkit-animation-name: spin;
+            animation-name: spin;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-duration: 0.4s;
+            animation-duration: 0.4s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
 }
 
 .footer {
@@ -838,14 +842,18 @@ body {
   color: transparent;
   font-weight: 900;
   transition: transform 0.3s;
-  -webkit-animation-name: spin;
-          animation-name: spin;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+}
+@media (min-width: 768px) {
+  .banniere__nom__favori i:hover {
+    -webkit-animation-name: spin;
+            animation-name: spin;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-duration: 0.4s;
+            animation-duration: 0.4s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
 }
 
 .carte {
@@ -1032,7 +1040,7 @@ body {
 }
 @media (min-width: 911px) {
   .carte__menu__liste__element:hover .carte__menu__liste__element__description, .carte__menu__liste__element:hover .carte__menu__liste__element__description__nom, .carte__menu__liste__element:hover .carte__menu__liste__element__description__bloc {
-    width: calc(33vw - 8rem);
+    width: calc(33vw - 8.5rem);
   }
 }
 .carte__menu__liste :nth-child(1n) {

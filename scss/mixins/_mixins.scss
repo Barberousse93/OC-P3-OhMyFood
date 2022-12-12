@@ -41,10 +41,14 @@
             color: transparent;
             font-weight: 900;
             transition: transform 0.3s;
-            animation-name: spin;
-            animation-iteration-count: 1;
-            animation-duration: 0.4s;
-            animation-timing-function: ease-in-out;
+
+            @include media-min-768
+            {
+                animation-name: spin;
+                animation-iteration-count: 1;
+                animation-duration: 0.4s;
+                animation-timing-function: ease-in-out;
+            }
         }
 
     }
