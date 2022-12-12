@@ -721,7 +721,7 @@ body {
   cursor: pointer;
   font-size: 30px;
   color: black;
-  transition: color 0.5s, font-weight 0.3s;
+  transition: all 0.5s;
 }
 .restaurants__cards__carte__description__favori i:hover {
   background: linear-gradient(#9356DC, #FF79DA);
@@ -729,7 +729,6 @@ body {
           background-clip: text;
   color: transparent;
   font-weight: 900;
-  transition: transform 0.3s;
 }
 @media (min-width: 768px) {
   .restaurants__cards__carte__description__favori i:hover {
@@ -833,7 +832,7 @@ body {
   cursor: pointer;
   font-size: 30px;
   color: black;
-  transition: color 0.5s, font-weight 0.3s;
+  transition: all 0.5s;
 }
 .banniere__nom__favori i:hover {
   background: linear-gradient(#9356DC, #FF79DA);
@@ -841,7 +840,6 @@ body {
           background-clip: text;
   color: transparent;
   font-weight: 900;
-  transition: transform 0.3s;
 }
 @media (min-width: 768px) {
   .banniere__nom__favori i:hover {

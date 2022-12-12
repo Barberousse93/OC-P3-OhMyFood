@@ -1,5 +1,4 @@
-@mixin anim-loader ($delay)
-{
+@mixin anim-loader ($delay) {
     // Animation lettre à lettre. Paramètre animation-delay
     animation-name: saut;
     animation-duration: 0.2s;
@@ -9,8 +8,7 @@
     animation-fill-mode: backwards;
 }
 
-@mixin anim_fondu
-{
+@mixin anim_fondu {
     //Animation fondu
     animation-name: fondu_out;
     animation-delay: 2s;
@@ -18,32 +16,27 @@
     animation-fill-mode: forwards;
 }
 
-@mixin icone_favori
-{
+@mixin icone_favori {
     // gestion de l'icône "coeur"
     display: flex;
     align-items: center;
     padding: 15px;
     margin-right: 15px;
 
-    & i
-    {
+    & i {
         cursor: pointer;
         font-size: 30px;
         color: black;
-        transition: color 0.5s, font-weight 0.3s;
+        transition: all 0.5s;
 
-        &:hover
-        {
+        &:hover {
             // sur survol, animation remplissage du coeur plus rotation un tour
             background: linear-gradient($Couleur-primaire, $Couleur-secondaire);
             background-clip: text;
             color: transparent;
             font-weight: 900;
-            transition: transform 0.3s;
 
-            @include media-min-768
-            {
+            @include media-min-768 {
                 animation-name: spin;
                 animation-iteration-count: 1;
                 animation-duration: 0.4s;
@@ -54,8 +47,7 @@
     }
 }
 
-@mixin bouton-couleur-primaire
-{
+@mixin bouton-couleur-primaire {
     background: linear-gradient($Couleur-primaire, $Couleur-secondaire);
     position: relative;
     margin: auto;
@@ -73,8 +65,7 @@
     z-index: 1;
     transition: transform 0.3s, box-shadow 0.3s;
 
-    @include media-min-768
-    {
+    @include media-min-768 {
         //Animation supplémentaires en mode tablette et PC
         animation-name: pulsation;
         animation-duration: 2s;
@@ -83,10 +74,8 @@
     }
 
 
-    &:hover
-    {
-        &::after
-        {
+    &:hover {
+        &::after {
             content: "";
             opacity: 1;
         }
@@ -94,8 +83,7 @@
         transform: scale(1.05);
         box-shadow: $ombre-hover;
 
-        @include media-min-912
-        {
+        @include media-min-912 {
             //Animation supplémentaires en mode PC
             animation-name: vibrate;
             animation-duration: 0.3s;
@@ -104,8 +92,7 @@
         }
     }
 
-    &::after
-    {
+    &::after {
         content: "";
         position: absolute;
         top: 0;
@@ -120,24 +107,21 @@
 
     }
 
-    &:active
-    {
+    &:active {
         transform: scale(1);
 
     }
 }
 
 
-@mixin ellipsis
-{
+@mixin ellipsis {
     //Texte tronqué si trop long
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-@mixin fade-in ($delay)
-{
+@mixin fade-in ($delay) {
     animation-name: fade-in;
     animation-duration: 0.5s;
     animation-delay: $delay;
@@ -145,22 +129,18 @@
     animation-fill-mode: both;
 }
 
-@mixin media-min-768
-{
+@mixin media-min-768 {
 
     //Mode tablette : à partir de 768px de large
-    @media (min-width:768px)
-    {
+    @media (min-width:768px) {
         @content;
     }
 }
 
-@mixin media-min-912
-{
+@mixin media-min-912 {
 
     //Mode PC à partir de 912px de large
-    @media (min-width:911px)
-    {
+    @media (min-width:911px) {
         @content;
     }
 }
